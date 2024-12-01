@@ -1,0 +1,349 @@
+/* Map Container */
+.map-container {
+  position: relative;
+  height: 100vh;
+}
+
+.map {
+  height: 100%;
+}
+
+/* Main Content */
+.main-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #eafaf1;
+  border-top: 3px solid #87c78a;
+  transition: height 0.3s ease, transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Expanded State */
+.main-content.expanded {
+  height: 80%; /* Adjust as needed */
+  transform: translateY(0); /* Ensure it's fully visible */
+}
+
+/* Collapsed State */
+.main-content.collapsed {
+  height: 42%; /* Adjust as needed */
+  transform: translateY(0%); /* Move it slightly downward */
+}
+
+/* Toggle Button */
+.toggle-button button {
+  width: 40%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #87c78a; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Navigation and Footer Icons */
+.navigation-icons,
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: #ffffff; /* White background for the icons section */
+  border-radius: 10px;
+}
+
+.icon-box {
+  text-align: center;
+  width: 20%;
+}
+
+.icon {
+  padding: 1rem;
+  background-color: #87c78a; /* Green background for icons */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.car-list {
+  padding: 16px;
+}
+
+.car-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.car-item:hover {
+  transform: translateY(-2px);
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #4caf50;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-left: 16px;
+}
+
+/* Footer */
+.footer-icons {
+  background-color: #d3f5db; /* Light green for footer */
+  border-top: 2px solid #87c78a;
+}
+
+/* Search Container */
+.Search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #eafaf1; /* Same light green as main content */
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+}
+
+.search-content i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #87c78a; /* Dark green color */
+}
+
+/* Search Mode Styling */
+.search-mode {
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.search-mode h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  background-color: #e9e9e9;
+  padding: 0.5rem;
+  border-radius: 10px;
+  gap: 0.5rem;
+}
+
+.input-item i {
+  color: green;
+}
+
+.saved-places h3 {
+  background-color: #e9e9e9;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.place-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.place-item i {
+  color: green;
+  margin-right: 1rem;
+}
+
+.agree-button {
+  display: block;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Confirm Pickup */
+.confirm-pickup {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.confirm-pickup h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px; /* รูปร่างของปุ่ม */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.confirm-button {
+  background-color: #4caf50; /* สีเขียว */
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336; /* สีแดง */
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #e53935;
+}
+
+/* General Styling for Live Location */
+.location-section {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Active Ride Header */
+.location-section .ride-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.location-section .ride-status-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.location-section .ride-status-header p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Driver Info Section */
+.location-section .driver-info-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+/* Driver Avatar */
+.location-section .driver-avatar {
+  font-size: 2.5rem;
+  color: green;
+}
+
+/* Driver Details */
+.location-section .driver-details h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.location-section .driver-details p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Driver Actions */
+.location-section .driver-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.location-section .driver-actions .action-button {
+  background-color: #e0ffe0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.location-section .driver-actions .action-button i {
+  font-size: 1.2rem;
+  color: green;
+}
