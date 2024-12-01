@@ -55,7 +55,8 @@ function Chat({ NameDriver, messages, setMessages, input, setInput }) {
       </div>
       <div className="Chat-Window" style={{ padding: "1rem", height: "70vh", overflowY: "scroll" }}>
         {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
+          <div key={index} className={`messageUser ${message.sender}`}>
+            <strong>{message.sender === "user" ? "You: " : "Driver: "}</strong>
             {message.text}
           </div>
         ))}
@@ -76,7 +77,7 @@ function Chat({ NameDriver, messages, setMessages, input, setInput }) {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => {
                 if (e.key === "Enter") {
-                  handleSendMessage("User");
+                  handleSendMessage("user");
                 }
               }}
               style={{

@@ -314,7 +314,7 @@ const LongdoMap = ({
             >
               <h2>Live Location</h2>
             </Link>
-            {liveLocation && isDriverlocation ? (
+            {liveLocation  ? (
               <div className="location-section">
                 <div className="ride-status-header">
                   <Link

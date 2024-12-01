@@ -58,6 +58,7 @@ function ChatMessageDriver({ NameUser,messages, setMessages, input, setInput }) 
       <div className="Chat-Window" style={{ padding: "1rem", height: "70vh", overflowY: "scroll" }}>
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.sender}`}>
+            <strong>{message.sender === "driver" ? "You: " : "user: "}</strong>
             {message.text}
           </div>
         ))}
