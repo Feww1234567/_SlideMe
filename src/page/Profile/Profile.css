@@ -1,0 +1,9 @@
+.Profile__containe div {
+    display: flex;
+    width: 85%;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-left: 7.5%;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

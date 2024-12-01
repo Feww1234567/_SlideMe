@@ -1,0 +1,29 @@
+.Chat-Window {
+    padding: 1rem;
+    height: 70vh;
+    overflow-y: scroll;
+  }
+  
+  .message {
+    max-width: 60%;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message.driver {
+    background-color: #d1ffd1;
+    align-self: flex-end;
+    margin-left: auto;
+    border: 1px solid #b2ffb2;
+  }
+  
+  .message.user {
+    background-color: #d1e0ff;
+    align-self: flex-start;
+    margin-right: auto;
+    border: 1px solid #b2c2ff;
+  }
+  
